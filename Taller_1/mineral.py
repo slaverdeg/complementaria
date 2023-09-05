@@ -23,7 +23,11 @@ class mineral:
         return float(self.specific_gravity)*1000
     
     def visualizar_color_mas_comun(self):
-
+        fig, ax = plt.subplots(figsize=(2, 2))
+        ax.set_facecolor(str(self.color))
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
+        plt.show()
 
     def imprimir_datos1 (self):
         d = str(self.dureza).stip()
