@@ -1,0 +1,10 @@
+Punto 1.1 
+awk -F "," '{print $3}' C:/Users/laura/OneDrive/Escritorio/FISI2526-MetCompCompl-202320/Taller_1/indices_refraccion.csv > materiales.txt
+
+Punto 1.2 
+
+while IFS=',' read -r col1 col2 col3 col4; do     Categoria="$col1";     Fabricante="$col2";     Material="$col3";     Enlace="$col4"; 
+    mkdir -p "$Categoria"; 
+    cd "$Categoria" || exit;      nombre_yml=$(basename "$Enlace"); 
+    if [ -n "$Enlace" ]; then         wget "$Enlace" -O "$nombre_yml";     fi; 
+    cd ..;  done < C:/Users/laura/OneDrive/Escritorio/FISI2526-MetCompCompl-202320/Taller_1/d2utmp25SEBd

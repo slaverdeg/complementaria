@@ -40,4 +40,3 @@ def densidad_promedio(m):
         d += 1
     p = n/d
     return round(p,2)
-
