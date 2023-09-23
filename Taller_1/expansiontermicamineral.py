@@ -26,7 +26,7 @@ class ExpansionTermicaMineral:
             n = "Grafito"
             
         elif "olivine" in self.nombre_archivo:
-            n = "Olivino"
+            n = "Olivina"
             
         else:
             n = "mineral analizado"
@@ -59,5 +59,7 @@ class ExpansionTermicaMineral:
         axs[1].set_ylabel(r'Coeficiente de Expansión Térmica (°C⁽⁻¹⁾)')
         axs[1].set_xlabel('Temperatura (°C)')
         axs[1].set_title('Coeficiente de Expansión Térmica vs Temperatura')
+
+        self.fig = fig
         
-        return ["\nEl Coeficiente de Expansión Térmica del " + n + " depende de la Temperatura del mmismo.\nPor ejemplo a " + str(self.T[1]) + "°C el Coeficiente de Expansión es igual a " + str(alpha[0]) +"°C⁽⁻¹⁾.\n" , "\nEl error global en el cálculo del Coeficiente de Expansión Térmica es " + str(error) + "."+"\n" , "\nLas gráficas corresponden a el Volumen y el Coeficiente de Expansión Térmica en función de la Temperatura respectivamente.\n"]                         
+        return ["\nEl Coeficiente de Expansión Térmica del " + n + " depende de la Temperatura del mismo.\nPor ejemplo a " + str(self.T[1]) + "°C el Coeficiente de Expansión es igual a " + str(alpha[0]) +"°C⁽⁻¹⁾.\n" , "\nEl error global en el cálculo del Coeficiente de Expansión Térmica es " + str(error) + "."+"\n" , "\nLas gráficas corresponden a el Volumen y el Coeficiente de Expansión Térmica en función de la Temperatura respectivamente.\n"]                         
