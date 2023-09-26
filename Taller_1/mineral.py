@@ -27,7 +27,7 @@ class mineral:
         ax.set_facecolor(str(self.color))
         ax.set_xlim(0, 1)
         ax.set_ylim(0, 1)
-        plt.show()
+        return fig
 
     def imprimir_datos1 (self):
         d = str(self.dureza).stip()
