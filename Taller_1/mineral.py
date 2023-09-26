@@ -38,3 +38,4 @@ class mineral:
         s = str(self.sistema_cristalino).strip()
         return print(d+"\n"+t_r+"\n"+s)
 
+#:)
